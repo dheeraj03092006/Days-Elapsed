@@ -44,5 +44,21 @@ print("Enter the final date in the form of date,month,year")
 d2=int(input("Enter the day: "))
 m2=int(input("Enter the month: "))
 y2=int(input("Enter the year: "))
-print("The elapsed days between the dates ",d1,"-",m1,"-",y1," and ",d2,"-",m2,"-",y2," is ",days_between_dates(d1, m1, y1, d2, m2, y2)," days")
 
+if y1<y2:
+    print("The elapsed days between the dates ",d1,"-",m1,"-",y1," and ",d2,"-",m2,"-",y2," is ",days_between_dates(d1, m1, y1, d2, m2, y2)," days")
+elif y1=y2:
+    if m1<m2:
+        print("The elapsed days between the dates ",d1,"-",m1,"-",y1," and ",d2,"-",m2,"-",y2," is ",days_between_dates(d1, m1, y1, d2, m2, y2)," days")
+    elif m1=m2:
+        if d1>d2:
+            print("Enter the correct schema of dates")
+            exit()
+        else:
+            print("The elapsed days between the dates ",d1,"-",m1,"-",y1," and ",d2,"-",m2,"-",y2," is ",days_between_dates(d1, m1, y1, d2, m2, y2)," days")
+    else:
+        print("Enter the correct schema of dates")
+        exit()         
+else:
+    print("Enter the correct schema of dates")
+    exit()
