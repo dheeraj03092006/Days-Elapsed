@@ -47,13 +47,15 @@ y2=int(input("Enter the year: "))
 
 if y1<y2:
     print("The elapsed days between the dates ",d1,"-",m1,"-",y1," and ",d2,"-",m2,"-",y2," is ",days_between_dates(d1, m1, y1, d2, m2, y2)," days")
-elif y1=y2:
+elif y1==y2:
     if m1<m2:
         print("The elapsed days between the dates ",d1,"-",m1,"-",y1," and ",d2,"-",m2,"-",y2," is ",days_between_dates(d1, m1, y1, d2, m2, y2)," days")
-    elif m1=m2:
+    elif m1==m2:
         if d1>d2:
             print("Enter the correct schema of dates")
             exit()
+        elif d1==d2:
+            print("There are no days elapsed between the given dates")
         else:
             print("The elapsed days between the dates ",d1,"-",m1,"-",y1," and ",d2,"-",m2,"-",y2," is ",days_between_dates(d1, m1, y1, d2, m2, y2)," days")
     else:
